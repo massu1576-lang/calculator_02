@@ -47,6 +47,10 @@ function ope_click(val){
     if(is_calc){
         is_calc = false;
     }
+    if(result.value == "ERROR"){
+        result.value = "0";
+        return;
+    }
 
     if(is_ope_last()){
         result.value = result.value.slice(0, -1) + val;
